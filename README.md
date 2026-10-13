@@ -13,7 +13,7 @@
 <!-- 2. nivojski razdelek -->
 ## Koda
 
-    Včasih pride prav značka `kda` za tipke. Značko uporabimo takole:
+Včasih pride prav značka `kda` za tipke. Značko uporabimo takole:
 
 <!-- začetek bloka kode -->
 ```
