@@ -11,7 +11,7 @@
 - *Prilepi* vsebino odložišča: Ctrl+V
 
 - Ustvari *Novo Datoteko*: Ctrl+N (**N**ew)
-- Ustvari *Datoteko*: Ctrl+O (**O**pen)
+- Odpri *Datoteko*: Ctrl+O (**O**pen)
 - *Poženi* program, datoteko, itd. : Win+R (**R**un)
 
 <!-- 2. nivojski razdelek -->
