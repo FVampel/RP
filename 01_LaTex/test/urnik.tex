@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 
 % NALOGA 1
@@ -318,28 +318,29 @@ Naslednje vrstice bodo pojasnile, kako implementirati postopek požrešne metode
 % (Nekoliko lepše izgleda, če v prazno vrstico vstavite % za komentar.)
 \noindent Zgoraj predstavljena shema je le grob opis postopka, ki ga nad urnikom izvaja požrešna metoda,
 zato si je smiselno podrobneje ogledati posamezne korake.
-
-   Z zanko se sprehodimo po vektorju vseh predmetov. Predmet na ??-tem koraku
+\begin{enumerate}
+   \item Z zanko se sprehodimo po vektorju vseh predmetov. Predmet na ??-tem koraku
    označimo s ??.
 
-   Naslednja vgnezdena zanka nas popelje po vseh predavalnicah. Predavalnico na
+   \item Naslednja vgnezdena zanka nas popelje po vseh predavalnicah. Predavalnico na
    ??-tem koraku označimo s ??.
 
-   Za vse proste termine ?? izračunamo ceno vstavljanja
+   \item Za vse proste termine ?? izračunamo ceno vstavljanja
    ??, ki ga sestavlja ??, profesor, ki ta predmet predava,
    ter skupina, kateri je predmet namenjen.
 
-   Če je trenutna cena boljša od najboljše dosedanje, potem najboljša dosedanja
-   dobi vrednost trenutne. Hkrati si zapomnimo, za kateri termin smo izračunali ceno
+   \item Če je trenutna cena boljša od najboljše dosedanje, potem najboljša dosedanja
+   dobi vrednos                                                                                                                                                                                                                                                                                                                                    t trenutne. Hkrati si zapomnimo, za kateri termin smo izračunali ceno
    vstavljanja, da bomo ?? na koncu vstavili v termin z najboljšo
    ceno vstavljanja.
 
-   Ko preverimo vse proste termine vseh predavalnic, vstavimo ??
+   \item Ko preverimo vse proste termine vseh predavalnic, vstavimo ??
    v termin z najboljšo ceno.
 
-   Sedaj se ponovno vrnemo na začetek in pogledamo najugodnejši termin za naslednji
+   \item Sedaj se ponovno vrnemo na začetek in pogledamo najugodnejši termin za naslednji
    predmet. Postopek ponavljamo, dokler se zunanja zanka, ki se sprehaja po vseh predmetih,
    ne zaključi. S tem smo namreč v urnik vstavili vse predmete.
+\end{enumerate}
 
 \subsection{Optimizacijske metode}% podrazdelek}
 
@@ -350,15 +351,17 @@ naraščajoča zmogljivost procesorjev le voda na njihov mlin, saj tako lahko v 
 so lokalni ali globalni optimumi.
 
 Če želimo spoznati optimizacijske metode, se moramo najprej seznaniti z dvema pojmoma.
-\emph(Operacija/ je vsaka sprememba oziroma poseg v urnik med izvajanjem optimizacije.)/
+\emph(Operacija)/ je vsaka sprememba oziroma poseg v urnik med izvajanjem optimizacije.)/
 Na primeru urnika si oglejmo, katere so smiselne operacije:
 
 % Vsaka od vrstic v okolju `itemize` je en element naštevanja.
 % začetek okolja itemize
-   \emph(Vstavljanje)/ srečanja v urnik.
-   \emph(Brisanje)/ srečanja iz urnika.
-   \emph(Zamenjava)/ dveh srečanj v urnik.
-% konec okolja itemize
+\begin{itemize}
+   \item \emph(Vstavljanje)/ srečanja v urnik.
+   \item \emph(Brisanje)/ srečanja iz urnika.
+   \item \emph(Zamenjava)/ dveh srečanj v urnik.
+\end{itemize}
+   % konec okolja itemize
 
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
@@ -400,24 +403,27 @@ Nadgradnja lokalnega vzpenjanja je jasno razvidna iz naslednje sheme.
 korakov, in si šele nato ogledajo njihov natančen opis.
 
 % začetek okolja enumerate
-   Zunanjo zanko izvajamo, dokler ne dosežemo enega izmed ustavitvenih pogojev.
-   Če nekaj časa kljub spreminjanju operacij nad urnikom vedno znova obstojimo na isti
-   rešitvi, potem to najverjetneje pomeni, da smo prišli do lokalnega ekstrema. Drugi
-   ustavitveni pogoj je zadovoljivo velika vrednost kriterijske funkcije.
 
-   Naključno izberemo okolico trenutne rešitve. Z okolico izberemo tudi operacijo,
-   ki jo izvajamo na tem koraku (npr. zamenjava dveh srečanj).
-
-   Če v tem koraku izberemo tisto zamenjavo srečanj, ki izmed vseh možnih najbolj
-   poveča vrednost kriterijske funkcije, potem postopamo enako, kot požrešna metoda. Če
-   želimo nadgraditi postopek lokalnega vzpenjanja, ne potrebujemo nujno najboljše možne
-   zamenjave, ampak prvo, ki poveča vrednost kriterijske funkcije. Izjemoma dovolimo tudi
-   tisto zamenjavo, ki vrednost kriterijske funkcije nekoliko zmanjša, kar se na prvi
-   pogled zdi nesmiselno, nas pa dolgoročno pripelje do boljših rešitev.
-
-   Izbrano zamenjavo dveh srečanj izvedemo na trenutnem urniku. Vidimo, da en korak
-   lokalnega vzpenjanja res predstavlja eno spremembo nad urnikom, v konkretnem primeru
-   smo izvedli (eno) zamenjavo dveh srečanj.
+\begin{enumerate}
+      \item Zunanjo zanko izvajamo, dokler ne dosežemo enega izmed ustavitvenih pogojev.
+      Če nekaj časa kljub spreminjanju operacij nad urnikom vedno znova obstojimo na isti
+      rešitvi, potem to najverjetneje pomeni, da smo prišli do lokalnega ekstrema. Drugi
+      ustavitveni pogoj je zadovoljivo velika vrednost kriterijske funkcije.
+   
+      \item Naključno izberemo okolico trenutne rešitve. Z okolico izberemo tudi operacijo,
+      ki jo izvajamo na tem koraku (npr. zamenjava dveh srečanj).
+   
+      \item Če v tem koraku izberemo tisto zamenjavo srečanj, ki izmed vseh možnih najbolj
+      poveča vrednost kriterijske funkcije, potem postopamo enako, kot požrešna metoda. Če
+      želimo nadgraditi postopek lokalnega vzpenjanja, ne potrebujemo nujno najboljše možne
+      zamenjave, ampak prvo, ki poveča vrednost kriterijske funkcije. Izjemoma dovolimo tudi
+      tisto zamenjavo, ki vrednost kriterijske funkcije nekoliko zmanjša, kar se na prvi
+      pogled zdi nesmiselno, nas pa dolgoročno pripelje do boljših rešitev.
+   
+      \item Izbrano zamenjavo dveh srečanj izvedemo na trenutnem urniku. Vidimo, da en korak
+      lokalnega vzpenjanja res predstavlja eno spremembo nad urnikom, v konkretnem primeru
+      smo izvedli (eno) zamenjavo dveh srečanj.
+\end{enumerate}
 % konec okolja enumerate
 
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
@@ -488,7 +494,7 @@ točk, oziroma ki ima največjo vrednost kriterijske funkcije.
 
    Na vsakem koraku ocenimo izboljšamo rešitev ??. Če je vrednost kriterijske funkcije
    za trenutno rešitev prešla zastavljeno zadovoljivo mejo, potem se program zaključi. Prav tako
-   se zaključi, če po ?? korakih še vedno tičimo v istem lokalnem maksimumu.
+   se zaključi, če po ? korakih še vedno tičimo v istem lokalnem maksimumu.
 
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
