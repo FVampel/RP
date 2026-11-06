@@ -4,6 +4,9 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.toc
+*.bbl
+*.big
 
 !urnik-resitev.pdf
 !magic-resitev.pdf
