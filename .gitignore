@@ -6,7 +6,10 @@
 *.synctex.gz
 *.toc
 *.bbl
-*.big
+*.blg
+*.idx
+*.ilg
+*.ind
+*.out
 
-!urnik-resitev.pdf
-!magic-resitev.pdf
+!*-resitev.pdf
