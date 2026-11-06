@@ -11,5 +11,7 @@
 *.ilg
 *.ind
 *.out
+*.snm
+*.nav
 
 !*-resitev.pdf
